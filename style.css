@@ -1,9 +1,152 @@
+/*https://colorpalettes.net/color-palette-1978/*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #1c1e26;
+    --dark-orange: #d1a701;
+    --yellow: #fdeb37;
+    --gray: #bdac9c;
+    --brown: #9d815b;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    background-color: var(--brown);
+}
+
 .container {
     max-width: 2560px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 32px;
     padding-right: 32px;
+}
+
+nav {
+    padding: 32px;
+    background-color: var(--dark-orange);
+    border-bottom: 8px solid var(--black);
+}
+
+#nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nav-links a {
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+.content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(var(--yellow), 90%, var(--dark-orange));
+    box-shadow: 0px 0px 16px 4px var(--dark-orange);
+    padding: 48px;
+}
+
+#welcome-content {
+    aspect-ratio: 3/2;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    background-color: white;
+}
+
+#welcome-text {
+    aspect-ratio: 3/2;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.text-box a {
+    font-size: 32px;
+    margin-top: 32px;
 }
 
 @media (max-width: 2560px){
