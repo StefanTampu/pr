@@ -159,6 +159,38 @@ h2 {
     width: 60%;
 }
 
+/*Proposal*/
+
+#main-proposal {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    width: 100%;
+}
+
+#button-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    background-color: var(--yellow);
+    color: var(--black);
+    outline: none;
+    border: 6px outset var(--yellow);
+    font-weight: 600;
+    font-size: 24px;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+#proposal-img {
+    width: 540px;
+}
+
 @media (max-width: 2560px){
     .container {
         max-width: 1440px;
