@@ -68,7 +68,8 @@ body {
     flex-direction: column;
     justify-content: start;
     position: relative;
-    background-color: var(--brown);
+    background: radial-gradient(hsla(29, 20%, 89%, 0.5), 90%, hsla(35, 21%, 49%, 0.9)), linear-gradient(hsla(29, 20%, 89%, 0.9), 20%, hsla(35, 21%, 49%, 0.8));
+    color: var(--black);    
 }
 
 .container {
@@ -117,7 +118,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(var(--yellow), 80%, var(--dark-orange)), linear-gradient(45deg, hsl(55, 98%, 50%), 20%, hsl(55, 98%, 80%));
+    background: radial-gradient(hsla(55, 98%, 60%, 1), 80%, hsla(48, 99%, 41%, 0.6)), linear-gradient(45deg, hsla(55, 98%, 50%, 1), 20%, hsla(55, 98%, 80%, 0.6));
     box-shadow: 4px 4px 8px var(--dark-orange);
     padding: 24px;
 }
@@ -127,9 +128,11 @@ main {
 }
 
 .text-box {
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
     padding: 16px;
     background-color: white;
     box-shadow: inset 0px 0px 8px var(--brown);
@@ -150,6 +153,24 @@ h2 {
 .text-box a {
     font-size: 32px;
     margin-top: 32px;
+    color: var(--black);
+}
+
+#start {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+#arrow {
+    transform: translateX(-8px);
+    transition: 500ms ease-in;
+    opacity: 0;
+}
+
+#start:hover #arrow {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 /*Background*/
@@ -164,8 +185,13 @@ h2 {
 #main-proposal {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 0;
     width: 100%;
+}
+
+#proposal-content {
+    height: 100%;
 }
 
 #button-box {
@@ -185,10 +211,26 @@ button {
     font-size: 24px;
     padding: 0 24px;
     cursor: pointer;
+    transition: 500ms ease-in;
+}
+
+#yes:hover {
+    background-color: hsl(55, 98%, 80%);
+    border: 6px outset hsl(55, 98%, 80%);
+}
+
+#no:hover {
+    background-color: var(--dark-orange);
+    border: 6px outset var(--dark-orange);
 }
 
 #proposal-img {
     width: 540px;
+}
+
+#yes-content {
+    width: 60%;
+    align-self: center;
 }
 
 @media (max-width: 2560px){
