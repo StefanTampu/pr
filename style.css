@@ -175,9 +175,33 @@ h2 {
 
 /*Background*/
 
+#background-row {
+    padding: 0 12px 0 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
 #back-content-1 {
-    margin-left: 5%;
-    width: 60%;
+    width: 800px;
+}
+
+#back-content-1 .text-box {
+    height: 100%;
+}
+
+#back-img-content {
+    width: 450px;
+    box-shadow: inset 0px 0px 8px var(--brown);
+}
+
+#img-box {
+    width: 450px;
+    aspect-ratio: 3/4;
+    background-image: url(Resources/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 200ms ease-in;
 }
 
 /*Proposal*/
